@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-900 font-heading;
+}
+
+.gradient {
+  background-color: #99c5ff;
+  background-image: radial-gradient(
+      at 4% 84%,
+      hsla(32, 95%, 70%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 7% 62%, hsla(304, 65%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 1%, hsla(193, 97%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 49%, hsla(290, 96%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 53% 56%, hsla(309, 74%, 60%, 1) 0px, transparent 50%);
+}
+
+.padding {
+  @apply px-4 sm:px-6 py-12 xl:py-16;
+}
+
+.essay-gradient {
+  background-color: hsla(105, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(289, 100%, 50%) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, hsla(170, 63%, 74%) 0px, transparent 50%);
+}
+
+.aira-chat-gradient {
+  background-color: hsla(224, 71%, 4%, 1);
+  background-image: radial-gradient(
+      at 100% 0%,
+      hsla(202, 100%, 50%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 100%, hsla(172, 100%, 50%, 1) 0px, transparent 50%);
+}
+
+.terms-gradient {
+  background-color: #ffe099;
+  background-image: radial-gradient(
+      at 28% 73%,
+      hsla(301, 69%, 62%, 0.44) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 68% 40%, hsla(36, 69%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 54% 83%, hsla(179, 77%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 57% 92%, hsla(245, 90%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 95% 78%, hsla(240, 74%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 9%, hsla(238, 63%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 13% 62%, hsla(270, 59%, 67%, 0.47) 0px, transparent 50%);
+}
+
+.gradient-background {
+  background-color: transparent;
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(25, 98%, 74%, 0.21) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 0%, hsla(289, 100%, 56%, 0.25) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(338, 100%, 57%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(268, 100%, 55%, 0.35) 0px, transparent 50%);
+  /* background-size: 200% 200%; */
+  /* animation: gradientAnimation 5s linear infinite alternate; */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.form-div {
+  z-index: 1; /* Ensure the form div appears above the upper div */
+  background-color: white; /* Set the background color of the form div */
+  padding: 1rem; /* Adjust the padding as needed */
+  margin-top: -2rem; /* Move the form div up by 2rem to overlap the upper div */
+}
